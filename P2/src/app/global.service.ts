@@ -9,9 +9,9 @@ export class GlobalService {
   constructor() { }
 
   public datos: contacto[] = [
-    {id: 0, nombre: 'Tarjeta TTP', serial_number: '100405977', caducidad: new Date(2000, 2, 29), tipo: 1, habitual: true},
-    {id: 1, nombre: 'Tarjeta Multi',serial_number: '100383403', caducidad: new Date(1999, 7, 12), tipo: 1, habitual: true},
-    {id: 2, nombre: 'Tarjeta Renfe&Tú',  serial_number: '100383506',caducidad: new Date(1999, 1, 25),tipo:2,habitual:false},
+    {id: 0, nombre: 'Tarjeta TTP', serial_number: '0061274879', caducidad: new Date(2024, 2, 29), tipo: 1, habitual: true},
+    {id: 1, nombre: 'Tarjeta Multi',serial_number: '1061295300', caducidad: new Date(2030, 7, 12), tipo: 2, habitual: false},
+    {id: 2, nombre: 'Tarjeta Renfe&Tú',  serial_number: '8064374879',caducidad: new Date(2025, 1, 25),tipo: 3, habitual:false},
 
   ];
 
