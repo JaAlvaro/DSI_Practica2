@@ -1,23 +1,37 @@
 
-<mat-menu #appMenu="matMenu">
-    <button mat-menu-item (click)="this.router.navigate(['edit/0']);">Nueva tarjeta</button>
-    <button mat-menu-item (click)="this.router.navigate(['list']);">Lista de tarjetas</button>
+<mat-menu #appMenu="matMenu" class="menu_lateral">
+    <button mat-menu-item (click)="this.router.navigate(['']);">Calcular trayetos</button>
+    
+    <button mat-menu-item (click)="this.router.navigate(['']);">Ver rutas guardadas</button>
+    <button mat-menu-item (click)="this.router.navigate(['']);">Recargar Tarjeta</button>
+    <button mat-menu-item (click)="this.router.navigate(['']);">Incidencias</button>
+    <button mat-menu-item>
+      <a href="https://www.crtm.es/atencion-al-cliente/gestiones/oficinas-de-gestion.aspx">Sedes CRTM</a>
+    </button>
+    <button mat-menu-item>
+      <a href="https://www.crtm.es/media/314733/oficinasgestionttp.pdf">Ayuda</a>
+    </button>
+    <button mat-menu-item>
+      <a href="https://www.crtm.es/proteccion-de-datos/">Privacidad y Protección de datos</a>
+    </button>
   </mat-menu>
   
   <mat-toolbar class="cabecera">  
-    <mat-toolbar-row>
-      <button mat-flat-button aria-label="Example icon-button with a heart icon" [matMenuTriggerFor]="appMenu">
-        Menú
-      </button>
-      <span class="example-spacer"></span>
-      <a href="https://www.crtm.es/">
-        <img class="logo_CRTM" src="../../assets/logo_crtm.png" alt="Logo CRTM">
-      </a>
-      
+    <mat-toolbar-row class="space-between" >
+        <button mat-flat-button aria-label="Menu" class="menu_button" [matMenuTriggerFor]="appMenu">
+          Menú
+        </button>
+                
+        <a href="https://www.crtm.es/">
+          <img class="logo_CRTM" src="../../assets/logo_crtm.png" alt="Logo CRTM">
+        </a>
+        
     </mat-toolbar-row>
   </mat-toolbar>
 
-  <span style="font-size:30px;">Menú principal</span>
+  <div style="margin-top:30px;font-size:30px;" fxLayout="row" fxLayoutAlign="center">
+    <p class="titulo-ventana">Menú principal</p>
+  </div>
 
 <div class="btn-group">
   <button  mat-menu-item (click)="this.router.navigate(['edit/0']);">Horarios</button>
@@ -26,4 +40,6 @@
   <button  mat-menu-item (click)="this.router.navigate(['list']);">Mapas</button>
 </div>
 <button class="bigButton" mat-menu-item (click)="this.router.navigate(['list']);">Recargar Tarjeta</button>
-<button class="roundButton" mat-menu-item (click)="this.router.navigate(['list']);">QR NFC</button>
+<button class="roundButton" (click)="this.router.navigate(['list']);">
+  <img class="card_icon" src="../../assets/card-icon.svg" alt="Icono Home">
+</button>
