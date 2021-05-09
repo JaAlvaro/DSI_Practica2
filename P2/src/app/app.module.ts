@@ -31,7 +31,6 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { VerDetalleComponent } from './ver-detalle/ver-detalle.component';
 import { ListadoComponent } from './listado/listado.component';
 import { GlobalService } from './global.service';
-import { SalidaComponent } from './salida/salida.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { PrincipalComponent } from './principal/principal.component';
@@ -42,7 +41,6 @@ import { PrincipalComponent } from './principal/principal.component';
     AppComponent,
     VerDetalleComponent,
     ListadoComponent,
-    SalidaComponent,
     PrincipalComponent
   ],
   imports: [
