@@ -186,3 +186,33 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* ESTILOS PROPIOS */
+$color_corporativo: #4747d1;
+
+.body {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+}
+
+.cabecera {
+    width: 100%;
+    padding: 15px 0;
+    background-color: $color_corporativo;
+}
+
+.logo_CRTM{
+  max-height: 80px;
+  margin: 5px;
+}
+
+.colNombre{
+  margin-left:100px;
+}
+
+.tarjeta{
+  max-height: 80px;
+  margin-right: 100px;
+}

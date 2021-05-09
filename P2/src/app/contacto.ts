@@ -27,12 +27,17 @@ export class contacto implements Icontacto
 
 export class Viewcontacto{
        
-    private static TIPOS:string[]=['','TTP','Multi','Renfe&Tú'];
-    
+    private static TIPOS:string[]=['','TTP','Multi','Renfe&Tú', 'Infantil', 'Azul'];
+    private static TARJETAS:string[]=['','../../assets/tarjeta_ttp.jpg','../../assets/tarjeta_multi.jpg','../../assets/tarjeta_renfe.png','../../assets/tarjeta_infantil.jpg','../../assets/tarjeta_azul.jpg'];
 
     public static getTipo(contacto:contacto)
     {
         return Viewcontacto.TIPOS[contacto.tipo];
+    }
+
+    public static getTarjeta(contacto:contacto)
+    {
+        return Viewcontacto.TARJETAS[contacto.tipo];
     }
 
 

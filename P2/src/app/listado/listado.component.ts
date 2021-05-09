@@ -19,7 +19,7 @@ export class ListadoComponent implements OnInit {
 
   ngOnInit() {}
 
-  public displayedColumns: string[] = ['nombre', 'tipo','serial_number','caducidad','habitual','action2'];
+  public displayedColumns: string[] = ['tarjeta','nombre', 'tipo','serial_number','caducidad','habitual','action2'];
   //public dataSource:contacto[]= this.global.datos;
   
   public search_texto:string="";
@@ -49,7 +49,7 @@ export class ListadoComponent implements OnInit {
 
   public eliminar(id)
   {
-    let snackBarRef = this._snackBar.open('contacto eliminado!','',{duration: 2000});
+    let snackBarRef = this._snackBar.open('Tarjeta eliminada','',{duration: 2000});
     this.global.eliminar(id);
     // Lanzar explicitamente el render solo es necesario con datasource estaticos...
     // si los datos son un Observable la tabla se repinta sola!.
@@ -70,6 +70,11 @@ export class ListadoComponent implements OnInit {
   public getTipo(o:contacto)
   {
     return Viewcontacto.getTipo(o);
+  }
+
+  public getTarjeta(o:contacto)
+  {
+    return Viewcontacto.getTarjeta(o);
   }
 
 
