@@ -1,10 +1,28 @@
-
+<mat-menu #appMenu="matMenu">
+    <button mat-menu-item (click)="this.router.navigate(['edit/0']);">Nueva tarjeta</button>
+    <button mat-menu-item (click)="this.router.navigate(['salida']);">Pruebas de grids y layouts</button>
+  </mat-menu>
+  
+  <mat-toolbar class="cabecera">  
+    <mat-toolbar-row>
+      <button mat-flat-button aria-label="Example icon-button with a heart icon" [matMenuTriggerFor]="appMenu">
+        Menú
+      </button>
+      <span class="example-spacer"></span>
+      <a href="https://www.crtm.es/">
+        <img class="logo_CRTM" src="../../assets/logo_crtm.png" alt="Logo CRTM">
+      </a>
+      
+    </mat-toolbar-row>
+  </mat-toolbar>
    
 <div  fxLayout="row" fxLayoutAlign="center">
 
 <div fxFlex=66 fxFlexFill fxLayout="column" fxLayoutAlign="center">
 
-<p fxFlex fxFlexAlign="center" class="titulo-ventana">contacto</p>
+
+    
+<p fxFlex fxFlexAlign="center" class="titulo-ventana">Tarjeta</p>
 
 
 

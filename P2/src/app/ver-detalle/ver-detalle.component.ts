@@ -11,7 +11,7 @@ import { contacto,Viewcontacto } from '../contacto';
 
 export class VerDetalleComponent implements OnInit {
 
-  constructor(private router: Router, private route: ActivatedRoute,private global:GlobalService) { }
+  constructor(public router: Router, public route: ActivatedRoute,private global:GlobalService) { }
   public id;
 
   public contacto:contacto;
@@ -49,4 +49,8 @@ export class VerDetalleComponent implements OnInit {
     this.router.navigate(['list/']);
   }
 
+  public editar(id)
+  {
+    this.router.navigate(['/edit',id,{id2:'4X4X',otro:57 } ]);
+  }
 }
