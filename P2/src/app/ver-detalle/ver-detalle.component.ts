@@ -19,10 +19,11 @@ export class VerDetalleComponent implements OnInit {
   ngOnInit() {
     
     this.route.paramMap.subscribe(params=>{
-      //console.log(params['params']);
+
       this.id =params['params']['id'];
+      console.log(params['params']['id']);
       if(this.id>0)
-        this.contacto=this.global.readcontacto(this.id);
+        this.contacto=this.global.readcontacto(this.id-1);
       else 
         this.contacto=new contacto();
     })
