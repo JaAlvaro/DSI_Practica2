@@ -38,7 +38,7 @@ export class VerDetalleComponent implements OnInit {
   public aceptar()
   {
     if(this.id>0)
-      this.global.updatecontacto(this.contacto.id,this.contacto);
+      this.global.updatecontacto(this.contacto.id-1,this.contacto);
     else
       this.global.nuevocontacto(this.contacto);
 
