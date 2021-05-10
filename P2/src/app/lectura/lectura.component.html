@@ -47,4 +47,32 @@
     <p class="titulo-ventana">Lectura de Tarjeta</p>
   </div>
 
+  <div class="half" fxLayout="row wrap" fxLayoutGap = "30px" fxLayout="flexsraer">
+    <div fxFlex="0 1 calc(50%-32px)">
+      <p> Acerque la tarjeta al móvil para leer la tarjeta</p>
+      <img src= "../../assets/contactless.gif" alt= "Pago NFC">
+    </div>
+    <div fxLayout = "column" fxFlex="0 1 calc(50%-32px)">
+      
+      <p> Seleccione entre las tarjetas guardadas: </p>
+      <mat-form-field fxFlex="25">
+        <mat-label>Número de tarjeta</mat-label>
+        <mat-select name="tarjeta" [(ngModel)]="search_tarjeta">
+          <mat-option *ngFor="let tarjeta of getTarjetas();let i=index" [value]="tarjeta">
+            {{tarjeta}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div fxLayout = "row">
+        <mat-card>
+          <img mat-card-image src={{getTarjeta(verTarjeta(search_tarjeta))}} alt={{getTipo(verTarjeta(search_tarjeta))}}>
+        </mat-card>
+        <mat-card>
+          <mat-card-content>{{verTarjeta(search_tarjeta).nombre}}</mat-card-content>
+          <mat-card-content>{{verTarjeta(search_tarjeta).caducidad}}</mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+
+  </div>
   <button  mat-menu-item (click)="this.router.navigate(['seleccion-viajes']);">Seleccionar Viaje</button>
