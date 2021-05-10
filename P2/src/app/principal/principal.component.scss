@@ -11,6 +11,12 @@ $color_corporativo: #02337c;
   height: 60px;
 }
 
+@media only screen and (max-width: 768px){
+  .btn-group button{
+    width: 70%;
+  }
+}
+
 .bigButton {
   display: flex;
   justify-content: center;
