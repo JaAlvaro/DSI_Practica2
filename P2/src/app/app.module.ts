@@ -34,6 +34,9 @@ import { GlobalService } from './global.service';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { PrincipalComponent } from './principal/principal.component';
+import { LecturaComponent } from './lectura/lectura.component';
+import { SeleccionViajesComponent } from './seleccion-viajes/seleccion-viajes.component';
+import { PagoComponent } from './pago/pago.component';
 
 
 @NgModule({
@@ -41,7 +44,10 @@ import { PrincipalComponent } from './principal/principal.component';
     AppComponent,
     VerDetalleComponent,
     ListadoComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    LecturaComponent,
+    SeleccionViajesComponent,
+    PagoComponent
   ],
   imports: [
     BrowserModule,
