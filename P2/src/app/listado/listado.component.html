@@ -1,8 +1,8 @@
 
 <mat-menu #appMenu="matMenu" class="menu_lateral">
   <button mat-menu-item (click)="this.router.navigate(['']);">Calcular trayetos</button>
-  
   <button mat-menu-item (click)="this.router.navigate(['']);">Ver rutas guardadas</button>
+  <button mat-menu-item (click)="this.router.navigate(['list']);">Ver tarjetas guardadas</button>
   <button mat-menu-item (click)="this.router.navigate(['']);">Recargar Tarjeta</button>
   <button mat-menu-item (click)="this.router.navigate(['']);">Incidencias</button>
   <button mat-menu-item>
@@ -131,6 +131,6 @@
 
 </div>
 
-<button class="roundButton" (click)="this.router.navigate(['list']);">
-  <img class="card_icon" src="../../assets/card-icon.svg" alt="Icono Home">
+<button class="roundButton" (click)="this.router.navigate(['lectura']);">
+  <img class="card_icon" src="../../assets/card-icon.svg" alt="Icono Card">
 </button>
