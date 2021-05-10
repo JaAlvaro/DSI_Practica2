@@ -46,12 +46,38 @@
     <p class="titulo-ventana">Compra de viajes</p>
   </div>
 
+
 <div class="btn-group">
-  <button  mat-menu-item (click)="this.router.navigate(['pago']);">Billete Sencillo - 1.50€</button>
-  <button  mat-menu-item (click)="this.router.navigate(['pago']);">Billete Metrobus 10 viajes</button>
-  <button  mat-menu-item (click)="this.router.navigate(['pago']);">Seleccionar por zonas</button>
-  <button  mat-menu-item (click)="this.router.navigate(['pago']);">Otros Billetes</button>
+  <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
+    Billete Sencillo - 1.50€
+    <img class="main-icon" src="../../assets/metro-icon.png" alt="horario-icon">
+  </button>
+
+  <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
+    Billete Metrobus 10 viajes
+    <img class="main-icon" src="../../assets/metro-icon.png" alt="ruta-icon">
+  </button>
+
+  <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
+    Viaje autobús - 1.50€
+    <img class="main-icon bus-icon" src="../../assets/bus-icon.svg" alt="horario-icon">
+  </button>
+
+  <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
+    Cercanías Renfe 
+    <img class="main-icon" src="../../assets/renfe-icon.png" alt="incidencia-icon">
+  </button>
+
+  <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
+    Recarga Tarjeta TTP
+    <img class="main-icon" src="../../assets/logo_crtm.png" alt="plano-icon">
+  </button>
 </div>
+
+
+
+
+
 <button class="roundButton" (click)="this.router.navigate(['lectura']);">
     <img class="card_icon" src="../../assets/card-icon.svg" alt="Icono Card">
   </button>
