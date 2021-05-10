@@ -8,7 +8,7 @@ import { Router, RouterModule,ActivatedRoute } from '@angular/router';
 })
 
 export class AppComponent{
-  public title = 'Agenda';
+  public title = 'App CRTM';
 
   constructor(private router: Router, private route: ActivatedRoute){
   }

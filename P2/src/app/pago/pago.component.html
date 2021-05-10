@@ -42,12 +42,34 @@
     </mat-toolbar-row>
   </mat-toolbar>
 
+<div style="margin-top:30px;font-size:30px;" fxLayout="row" fxLayoutAlign="center">
+  <p class="titulo-ventana">Selecciona un método de pago</p>
+</div>
 
-<p> Seleccione su método de pago: </p> //poner scss display block en vez de flex y una checklist con solo 1 opción
+<button class="back_button space-between" (click)="this.router.navigate(['seleccion-viajes']);">
+  <img class="back_icon" src="../../assets/back-icon.svg" alt="back-icon">
+  Atrás
+</button>
 
 <div class="btn-group">
-  <button  mat-menu-item (click)="this.router.navigate(['']);">Paypal</button>
-  <button  mat-menu-item (click)="this.router.navigate(['']);">Tarjeta de Crédito</button>
-  <button  mat-menu-item (click)="this.router.navigate(['']);">Tarjeta de débito</button>
-  <button  mat-menu-item (click)="this.router.navigate(['']);">Otros métodos</button>
+  <button mat-menu-item class="space-between" (click)="this.router.navigate(['confirmacion_pago']);">
+    PayPal
+    <img class="main-icon" src="../../assets/paypal-icon.svg" alt="paypal-icon">
+  </button>
+
+  <button mat-menu-item class="space-between" (click)="this.router.navigate(['confirmacion_pago']);">
+    MasterCard - **5778
+    <img class="main-icon" src="../../assets/mastercard-icon.svg" alt="mastercard-icon">
+  </button>
+
+  <button mat-menu-item class="space-between" (click)="this.router.navigate(['confirmacion_pago']);">
+    Visa - **1129
+    <img class="main-icon bus-icon" src="../../assets/visa-icon.svg" alt="visa-icon">
+  </button>
+
+  <button mat-menu-item class="space-between" (click)="this.router.navigate(['']);">
+    Añadir nuevo método
+    <img class="main-icon" src="../../assets/add-icon.svg" alt="add-icon">
+  </button>
+
 </div>

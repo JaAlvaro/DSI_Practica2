@@ -38,6 +38,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { LecturaComponent } from './lectura/lectura.component';
 import { SeleccionViajesComponent } from './seleccion-viajes/seleccion-viajes.component';
 import { PagoComponent } from './pago/pago.component';
+import { ConfirmacionPagoComponent } from './confirmacion-pago/confirmacion-pago.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { PagoComponent } from './pago/pago.component';
     PrincipalComponent,
     LecturaComponent,
     SeleccionViajesComponent,
-    PagoComponent
+    PagoComponent,
+    ConfirmacionPagoComponent
   ],
   imports: [
     BrowserModule,

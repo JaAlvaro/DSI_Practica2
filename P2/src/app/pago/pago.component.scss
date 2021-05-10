@@ -1,0 +1,51 @@
+$color_corporativo: #02337c;
+.btn-group button {
+  align-items: center;
+  background-color: #b0ccff;
+  border: 1px solid rgb(37, 0, 0) !important; 
+  color: rgb(0, 0, 0); 
+  margin: 20px auto;
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+  height: 60px;
+}
+
+@media only screen and (max-width: 768px){
+  .btn-group button{
+    width: 70%;
+  }
+}
+
+.bigButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color_corporativo;
+  border: 1px solid rgb(0, 0, 0); 
+  color: rgb(255, 255, 255); 
+  margin: 30px auto;
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 70%; /* Set a width if needed */
+  height: 60px;
+  font-size: larger;
+}
+
+.bigButton:hover{
+  background-color: #3159db;
+}
+
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3159db;
+}
+.main-icon {
+  height: 55px;
+}
+  

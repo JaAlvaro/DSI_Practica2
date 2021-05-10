@@ -6,6 +6,8 @@ import { PrincipalComponent } from './principal/principal.component';
 import { SeleccionViajesComponent } from './seleccion-viajes/seleccion-viajes.component';
 import { PagoComponent } from './pago/pago.component';
 import { LecturaComponent } from './lectura/lectura.component';
+import { ConfirmacionPagoComponent } from './confirmacion-pago/confirmacion-pago.component';
+
 
 
 const routes: Routes = [{path:'list',component:ListadoComponent},
@@ -14,7 +16,8 @@ const routes: Routes = [{path:'list',component:ListadoComponent},
                         {path:'seleccion-viajes',component:SeleccionViajesComponent},
                         {path:'edit/:id',component:VerDetalleComponent},
                         {path:'pago',component:PagoComponent},
-                        {path:'lectura',component:LecturaComponent}
+                        {path:'lectura',component:LecturaComponent},
+                        {path:'confirmacion_pago',component:ConfirmacionPagoComponent},
                         
                         ];
 

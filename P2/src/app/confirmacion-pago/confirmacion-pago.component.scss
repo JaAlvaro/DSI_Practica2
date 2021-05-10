@@ -1,0 +1,30 @@
+$color_corporativo: #02337c;
+
+.check_icon{
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height:150px;
+}
+  
+  
+.bigButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color_corporativo;
+  border: 1px solid rgb(0, 0, 0); 
+  color: rgb(255, 255, 255); 
+  margin: 30px auto;
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 70%; /* Set a width if needed */
+  height: 60px;
+  font-size: larger;
+}
+
+.bigButton:hover{
+  background-color: #3159db;
+}

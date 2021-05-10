@@ -43,39 +43,40 @@
   </mat-toolbar>
 
   <div style="margin-top:30px;font-size:30px;" fxLayout="row" fxLayoutAlign="center">
-    <p class="titulo-ventana">Compra de viajes</p>
+    <p class="titulo-ventana">Selecciona una recarga</p>
   </div>
 
+  <button class="back_button space-between" (click)="this.router.navigate(['lectura']);">
+    <img class="back_icon" src="../../assets/back-icon.svg" alt="back-icon">
+    Atrás
+  </button>
 
 <div class="btn-group">
   <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
     Billete Sencillo - 1.50€
-    <img class="main-icon" src="../../assets/metro-icon.png" alt="horario-icon">
+    <img class="main-icon" src="../../assets/metro-icon.png" alt="metro-icon">
   </button>
 
   <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
-    Billete Metrobus 10 viajes
-    <img class="main-icon" src="../../assets/metro-icon.png" alt="ruta-icon">
+    Billete Metrobus 10 viajes - 12.20€
+    <img class="main-icon" src="../../assets/metro-icon.png" alt="metro-icon">
   </button>
 
   <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
     Viaje autobús - 1.50€
-    <img class="main-icon bus-icon" src="../../assets/bus-icon.svg" alt="horario-icon">
+    <img class="main-icon bus-icon" src="../../assets/bus-icon.svg" alt="bus-icon">
   </button>
 
   <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
-    Cercanías Renfe 
-    <img class="main-icon" src="../../assets/renfe-icon.png" alt="incidencia-icon">
+    Cercanías Renfe - 2.00€
+    <img class="main-icon" src="../../assets/renfe-icon.png" alt="renfe-icon">
   </button>
 
   <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
-    Recarga Tarjeta TTP
-    <img class="main-icon" src="../../assets/logo_crtm.png" alt="plano-icon">
+    Recarga Tarjeta TTP - 65.00€
+    <img class="main-icon" src="../../assets/logo_crtm.png" alt="ttp-icon">
   </button>
 </div>
-
-
-
 
 
 <button class="roundButton" (click)="this.router.navigate(['lectura']);">
