@@ -187,8 +187,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-/* ESTILOS PROPIOS */
-$color_corporativo: #4747d1;
+/*-------------------------------------------- ESTILOS PROPIOS --------------------------------------------*/
+$color_corporativo: #02337c;
 
 .body {
   margin: 0;
@@ -201,6 +201,11 @@ img {
   margin: 0 auto;
 }
 
+.align-center{
+  align-items: center;
+  display: flex;
+}
+
 .cabecera {
     width: 100%;
     padding: 15px 0;
@@ -208,8 +213,8 @@ img {
 }
 
 .space-between{
-  display: flex;
-  justify-content: space-between;
+  display: flex!important;
+  justify-content: space-between!important;
 }
 .menu_lateral a:link, a:visited, a:active{
   text-decoration: none;
@@ -219,19 +224,26 @@ img {
   width: 80px;
 }
 
-.home_button{
+.transparent{
   background-color: transparent;
+}
+
+.border-none{
   border: none;
 }
 
-.home_button img{
+.home_icon{
   width: 50px;
   cursor: pointer;
-  padding-left: 25px;
+  padding-right: 30px;
+}
+.user_icon{
+  width: 50px;
+  cursor: pointer;
+  padding-left: 15px;
 }
 
 .add_tarjeta_button{
-  display: flex;
   width: 150px;
   padding: 10px;
   margin: 0 0 0 auto;
@@ -260,7 +272,7 @@ img {
   width:60px;
   height:60px;
   cursor: pointer;
-  background-color:#34005f;
+  background-color: $color_corporativo;
   color: rgb(255, 255, 255); 
   margin-right: 70px;
   margin-bottom: 100px;

@@ -1,27 +1,38 @@
 <mat-menu #appMenu="matMenu" class="menu_lateral">
-    <button mat-menu-item (click)="this.router.navigate(['']);">Calcular trayetos</button>
-    <button mat-menu-item (click)="this.router.navigate(['']);">Ver rutas guardadas</button>
-    <button mat-menu-item (click)="this.router.navigate(['list']);">Ver tarjetas guardadas</button>
-    <button mat-menu-item (click)="this.router.navigate(['']);">Recargar Tarjeta</button>
-    <button mat-menu-item (click)="this.router.navigate(['']);">Incidencias</button>
-    <button mat-menu-item>
-      <a href="https://www.crtm.es/atencion-al-cliente/gestiones/oficinas-de-gestion.aspx">Sedes CRTM</a>
-    </button>
-    <button mat-menu-item>
-      <a href="https://www.crtm.es/media/314733/oficinasgestionttp.pdf">Ayuda</a>
-    </button>
-    <button mat-menu-item>
-      <a href="https://www.crtm.es/proteccion-de-datos/">Privacidad y Protección de datos</a>
-    </button>
-  </mat-menu>
+  <button mat-menu-item (click)="this.router.navigate(['']);">
+    Notificaciones
+    <mat-icon color="primary" [matBadge]="1" matBadgeColor="warn" matBadgePosition="above after"></mat-icon>
+  </button>
+  <button mat-menu-item (click)="this.router.navigate(['']);">Calcular trayectos</button>
+  <button mat-menu-item (click)="this.router.navigate(['']);">Ver rutas guardadas</button>
+  <button mat-menu-item (click)="this.router.navigate(['list']);">Ver tarjetas guardadas</button>
+  <button mat-menu-item (click)="this.router.navigate(['lectura']);">Recargar Tarjeta</button>
+  <button mat-menu-item (click)="this.router.navigate(['']);">Incidencias</button>
+  <button mat-menu-item>
+    <a href="https://www.crtm.es/atencion-al-cliente/gestiones/oficinas-de-gestion.aspx">Sedes CRTM</a>
+  </button>
+  <button mat-menu-item>
+    <a href="https://www.crtm.es/media/314733/oficinasgestionttp.pdf">Ayuda</a>
+  </button>
+  <button mat-menu-item>
+    <a href="https://www.crtm.es/proteccion-de-datos/">Privacidad y Protección de datos</a>
+  </button>
+</mat-menu>
   
   <mat-toolbar class="cabecera">  
     <mat-toolbar-row class="space-between" >
+      <div class="align-center">
         <button mat-flat-button aria-label="Menu" class="menu_button" [matMenuTriggerFor]="appMenu">
           Menú
         </button>
+        <span> </span>
+        <button class="transparent border-none">
+          <img class="user_icon" src="../../assets/user-icon.svg" alt="Icono Perfil">
+        </button>
+      </div>
         
-        <button  class="home_button" (click)="this.router.navigate(['']);">
+        
+        <button  class="transparent border-none" (click)="this.router.navigate(['']);">
           <img class="home_icon" src="../../assets/home-icon.svg" alt="Icono Home">
         </button>
         
