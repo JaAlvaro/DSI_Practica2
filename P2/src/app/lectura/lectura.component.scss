@@ -1,4 +1,5 @@
-  .half {
+$color_corporativo: #02337c;
+.half {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -27,4 +28,23 @@
       margin-right: unset;
       margin-bottom: 32px;
     }
+  }
+
+  .bigButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color_corporativo;
+    border: 1px solid rgb(0, 0, 0); 
+    color: rgb(255, 255, 255); 
+    margin: 30px auto;
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 70%; /* Set a width if needed */
+    height: 60px;
+    font-size: larger;
+  }
+  
+  .bigButton:hover{
+    background-color: #3159db;
   }

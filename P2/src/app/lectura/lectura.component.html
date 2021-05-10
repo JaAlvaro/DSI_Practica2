@@ -69,10 +69,11 @@
         </mat-card>
         <mat-card>
           <mat-card-content>{{verTarjeta(search_tarjeta).nombre}}</mat-card-content>
-          <mat-card-content>{{verTarjeta(search_tarjeta).caducidad}}</mat-card-content>
+          <mat-card-content>{{verTarjeta(search_tarjeta).caducidad | date: "MM-yyyy"}}</mat-card-content>
         </mat-card>
       </div>
     </div>
 
   </div>
-  <button  mat-menu-item (click)="this.router.navigate(['seleccion-viajes']);">Seleccionar Viaje</button>
+  
+  <button class="bigButton" mat-menu-item (click)="this.router.navigate(['seleccion-viajes']);">Seleccionar tarjeta</button>
