@@ -10,8 +10,16 @@ $color_corporativo: #02337c;
     box-sizing: border-box;
   }
     div > *:not(:last-child) {
-    margin-right: 32px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+
   }
+  .imagen{
+    min-width: 50%;
+
+  }
+
   /* Item sizing */
   .div {
     flex: 0 1 calc(50% - 32px);
@@ -29,7 +37,14 @@ $color_corporativo: #02337c;
       margin-bottom: 32px;
     }
   }
-
+  .centre{
+    align-items: center;
+  }
+  .tarjeta{
+    width: 100%;
+    height: auto;
+    max-height: max-content;
+  }
   .bigButton {
     display: flex;
     justify-content: center;
