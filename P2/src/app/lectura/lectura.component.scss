@@ -1,0 +1,30 @@
+  .half {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  /* Column Gap */
+  .div > * {
+    box-sizing: border-box;
+  }
+    div > *:not(:last-child) {
+    margin-right: 32px;
+  }
+  /* Item sizing */
+  .div {
+    flex: 0 1 calc(50% - 32px);
+  }
+ 
+  /* small size viewport */
+  @media screen and (max-width: 599px) {
+    .half {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    div > *:not(:last-child) {
+      margin-right: unset;
+      margin-bottom: 32px;
+    }
+  }

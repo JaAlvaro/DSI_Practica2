@@ -51,4 +51,13 @@ export class GlobalService {
   {
     return this.datos.length;
   }
+
+  public getTarjetas(){
+    let tarjetas = [];
+    for (let i = 0; i<this.datos.length; i++){
+      tarjetas[i] = this.datos[i].id; 
+    }
+    console.log(tarjetas);
+    return tarjetas;
+  }
 }

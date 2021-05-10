@@ -20,6 +20,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatInputModule} from '@angular/material/input';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
@@ -56,7 +57,7 @@ import { PagoComponent } from './pago/pago.component';
     FormsModule,MatFormFieldModule, MatIconModule,
 
     MatInputModule,MatSelectModule,
-    MatButtonModule,MatCheckboxModule,
+    MatButtonModule,MatCheckboxModule, MatCardModule,
 
     MatTableModule,MatBadgeModule,  MatExpansionModule,
     MatSnackBarModule,MatTooltipModule,MatToolbarModule,
