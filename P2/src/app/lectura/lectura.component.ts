@@ -19,7 +19,7 @@ export class LecturaComponent implements OnInit {
   public search_tarjeta:number; 
   
   public verTarjeta(id:number){
-    return this.global.readcontacto(id)
+    return this.global.readcontacto(id-1)
   }
   public getTarjetas(){
     return this.global.getTarjetas()

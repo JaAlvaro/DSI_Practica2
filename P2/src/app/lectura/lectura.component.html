@@ -47,30 +47,32 @@
     <p class="titulo-ventana">Lectura de Tarjeta</p>
   </div>
 
-  <div class="half" fxLayout="row wrap" fxLayoutGap = "30px" fxLayout="flexsraer">
-    <div fxFlex="0 1 calc(50%-32px)">
-      <p> Acerque la tarjeta al móvil para leer la tarjeta</p>
-      <img src= "../../assets/contactless.gif" alt= "Pago NFC">
+  <div class="half" fxLayout="row wrap" fxLayoutGap = "30px" fxLayout="flexsraer" >
+    <div fxLayout = "column" fxFlex="0 1 calc(50%-32px)">
+      <p fxLayoutAlign="center"> Acerque la tarjeta al móvil para leer la tarjeta</p>
+          <div fxLayoutAlign="center" fxFlex="70%">
+          <img class="imagen" src= "../../assets/contactless.gif" alt= "Pago NFC">
+          </div>
     </div>
     <div fxLayout = "column" fxFlex="0 1 calc(50%-32px)">
       
       <p> Seleccione entre las tarjetas guardadas: </p>
       <mat-form-field fxFlex="25">
         <mat-label>Número de tarjeta</mat-label>
-        <mat-select name="tarjeta" [(ngModel)]="search_tarjeta">
+        <mat-select class="tarjeta" name="tarjeta" [(ngModel)]="search_tarjeta">
           <mat-option *ngFor="let tarjeta of getTarjetas();let i=index" [value]="tarjeta">
             {{tarjeta}}
           </mat-option>
         </mat-select>
       </mat-form-field>
       <div fxLayout = "row">
-        <mat-card>
-          <img mat-card-image src={{getTarjeta(verTarjeta(search_tarjeta))}} alt={{getTipo(verTarjeta(search_tarjeta))}}>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>{{verTarjeta(search_tarjeta).nombre}}</mat-card-content>
-          <mat-card-content>{{verTarjeta(search_tarjeta).caducidad | date: "MM-yyyy"}}</mat-card-content>
-        </mat-card>
+        <div fxFlex="0 1 calc(50%-32px)">
+          <img class="tarjeta" src={{getTarjeta(verTarjeta(search_tarjeta))}} alt={{getTipo(verTarjeta(search_tarjeta))}}>
+        </div>
+        <div fxFlex="0 1 calc(50%-32px)">
+          <p>{{verTarjeta(search_tarjeta).nombre}}</p>
+          <p>{{verTarjeta(search_tarjeta).caducidad | date: "MM-yyyy"}}</p>
+        </div>
       </div>
     </div>
 
