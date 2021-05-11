@@ -69,7 +69,7 @@ export class GlobalService {
 
   public nuevocontacto(contacto:contacto)
   {
-    contacto.id=this.datos.length;
+    contacto.id=this.datos.length+1;
     this.datos.push(contacto);
   }
 
