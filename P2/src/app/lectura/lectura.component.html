@@ -47,6 +47,8 @@
     <p class="titulo-ventana">Lectura de Tarjeta</p>
   </div>
 
+  
+
   <div class="half" >
     <div class = "responsive bottomMargin" fxLayout = "column" fxFlex="0 1 calc(50%-32px)">
       <p fxLayoutAlign="center"> Acerque la tarjeta al sensor NFC del móvil para leer la tarjeta.</p>
@@ -57,6 +59,12 @@
     <div class = "responsive" fxLayout = "column" fxFlex="0 1 calc(50%-32px)">
       
       <p> O bien, seleccione una de entre las tarjetas guardadas: </p>
+      
+      <button *ngIf="search_tarjeta==-1" class="add_tarjeta_button space-between" (click)="this.router.navigate(['edit/0']);">
+        Nueva tarjeta
+        <img class="add_icon" src="../../assets/add-icon.svg" alt="add-icon">
+      </button>
+
       <mat-form-field fxFlex="25">
         <mat-label>Nombre de tarjeta</mat-label>
         <mat-select class="tarjeta" name="tarjeta" [(ngModel)]="search_tarjeta">
