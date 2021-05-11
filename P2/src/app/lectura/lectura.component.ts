@@ -16,7 +16,7 @@ export class LecturaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public search_tarjeta:number; 
+  public search_tarjeta:number = -1; 
   
   public verTarjeta(id:number){
     return this.global.readcontacto(id-1)

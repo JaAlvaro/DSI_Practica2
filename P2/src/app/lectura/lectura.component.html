@@ -78,4 +78,4 @@
 
   </div>
   
-  <button class="bigButton" mat-menu-item (click)="this.router.navigate(['seleccion-viajes']);">Seleccionar tarjeta</button>
+  <button *ngIf="search_tarjeta!=-1" class="bigButton" mat-menu-item (click)="this.router.navigate(['seleccion-viajes']);">Seleccionar tarjeta</button>
