@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Icontacto,contacto,Viewcontacto } from './contacto';
-import { Iviaje,viaje, Viewviaje} from './viaje';
+import { Iviaje,viaje} from './viaje';
 
 @Injectable({
   providedIn: 'root'
