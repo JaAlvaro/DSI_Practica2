@@ -39,22 +39,27 @@ export class LecturaComponent implements OnInit {
     switch (Viewcontacto.getTipo(o)){
       case 'TTP':
         route = 'seleccion-viajes/ttp';
+        // route = "this.router.navigate(['seleccion-viajes/ttp']);"
         break;
       case'Multi':
       route = 'seleccion-viajes/multi';
+        // route = "this.router.navigate(['seleccion-viajes/multi']);"
         break;
       case 'Renfe&Tú':
         route = 'seleccion-viajes/renfe';
+        // route = "this.router.navigate(['seleccion-viajes/renfe']);"
         break;
       case 'Infantil':
         route = 'seleccion-viajes/infantil';
+        // route = "this.router.navigate(['seleccion-viajes/infantil']);"
         break;
       case 'Azul':
         route = 'seleccion-viajes/azul';
+        // route = "this.router.navigate(['seleccion-viajes/azul']);"
         break;
-
+      
     }
-    return route;
+    this.router.navigate([route]);
   }
   
 }
