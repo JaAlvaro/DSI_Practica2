@@ -1,39 +1,52 @@
 $color_corporativo: #02337c;
-.half {
+@media screen and (min-width: 600px) {
+  
+  .half {
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
+    align-content: space-around
   }
   /* Column Gap */
-  .div > * {
+  .responsive > * {
     box-sizing: border-box;
   }
-    div > *:not(:last-child) {
+  .responsive > *:not(:last-child) {
     margin-left: 16px;
     margin-right: 16px;
     margin-top: 16px;
-
   }
-  .imagen{
-    min-width: 50%;
-
-  }
-
-  /* Item sizing */
-  .div {
+   .responsive {
     flex: 0 1 calc(50% - 32px);
   }
+}
+  .imagen{
+    min-width: 50%;
+    height: fit-content;
+
+
+  }
+
+
+  /* Item sizing */
+ 
  
   /* small size viewport */
   @media screen and (max-width: 599px) {
     .half {
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      flex-direction: column !important;
+      margin: 0px 10px;
+      flex-shrink: 10px;
+
     }
-    div > *:not(:last-child) {
+    .responsive{
       margin-right: unset;
+      flex: 90%;
+      align-items: center;
+    }
+    .bottomMargin{
       margin-bottom: 32px;
     }
   }
@@ -43,7 +56,13 @@ $color_corporativo: #02337c;
   .tarjeta{
     width: 100%;
     height: auto;
-    max-height: max-content;
+    max-height: fit-content;
+    margin-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .paragraph{
+    margin: 1em 1em !important;
   }
   .bigButton {
     display: flex;
