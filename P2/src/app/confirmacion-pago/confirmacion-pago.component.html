@@ -1,23 +1,17 @@
 <mat-menu #appMenu="matMenu" class="menu_lateral">
-    <button mat-menu-item (click)="this.router.navigate(['']);">
-      Notificaciones
-      <mat-icon color="primary" [matBadge]="1" matBadgeColor="warn" matBadgePosition="above after"></mat-icon>
-    </button>
-    <button mat-menu-item (click)="this.router.navigate(['']);">Calcular trayectos</button>
-    <button mat-menu-item (click)="this.router.navigate(['']);">Ver rutas guardadas</button>
-    <button mat-menu-item (click)="this.router.navigate(['list']);">Ver tarjetas guardadas</button>
-    <button mat-menu-item (click)="this.router.navigate(['lectura']);">Recargar Tarjeta</button>
-    <button mat-menu-item (click)="this.router.navigate(['']);">Incidencias</button>
-    <button mat-menu-item>
-      <a href="https://www.crtm.es/atencion-al-cliente/gestiones/oficinas-de-gestion.aspx">Sedes CRTM</a>
-    </button>
-    <button mat-menu-item>
-      <a href="https://www.crtm.es/media/314733/oficinasgestionttp.pdf">Ayuda</a>
-    </button>
-    <button mat-menu-item>
-      <a href="https://www.crtm.es/proteccion-de-datos/">Privacidad y Protección de datos</a>
-    </button>
-  </mat-menu>
+  <button mat-menu-item (click)="this.router.navigate(['']);">
+    Notificaciones
+    <mat-icon color="primary" [matBadge]="1" matBadgeColor="warn" matBadgePosition="above after"></mat-icon>
+  </button>
+  <button mat-menu-item (click)="this.router.navigate(['']);">Calcular trayectos</button>
+  <button mat-menu-item (click)="this.router.navigate(['']);">Ver rutas guardadas</button>
+  <button mat-menu-item (click)="this.router.navigate(['list']);">Ver tarjetas guardadas</button>
+  <button mat-menu-item (click)="this.router.navigate(['lectura']);">Recargar Tarjeta</button>
+  <button mat-menu-item (click)="this.router.navigate(['']);">Incidencias</button>
+  <button mat-menu-item onclick="window.location='https://www.crtm.es/atencion-al-cliente/gestiones/oficinas-de-gestion.aspx'">Sedes CRTM</button>
+  <button mat-menu-item onclick="window.location='https://www.crtm.es/atencion-al-cliente.aspx'">Ayuda</button>
+  <button mat-menu-item onclick="window.location='https://www.crtm.es/proteccion-de-datos/'">Privacidad y Protección de datos</button>
+</mat-menu>
     
     <mat-toolbar class="cabecera">  
       <mat-toolbar-row class="space-between" >
@@ -52,7 +46,7 @@
         <img class="check_icon"  src="../../assets/credit-card.png" alt="Icono Confirmación">
         <br>
         <div class="btn-group">
-            <button class="bigButton" mat-menu-item (click)="this.router.navigate(['']);">Volver al menú principal</button>
+            <button class="bigButton borde_curvo" mat-menu-item (click)="this.router.navigate(['']);">Volver al menú principal</button>
         </div>
         <br>
       </fieldset>  

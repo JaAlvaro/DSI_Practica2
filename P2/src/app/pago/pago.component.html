@@ -8,15 +8,9 @@
   <button mat-menu-item (click)="this.router.navigate(['list']);">Ver tarjetas guardadas</button>
   <button mat-menu-item (click)="this.router.navigate(['lectura']);">Recargar Tarjeta</button>
   <button mat-menu-item (click)="this.router.navigate(['']);">Incidencias</button>
-  <button mat-menu-item>
-    <a href="https://www.crtm.es/atencion-al-cliente/gestiones/oficinas-de-gestion.aspx">Sedes CRTM</a>
-  </button>
-  <button mat-menu-item>
-    <a href="https://www.crtm.es/media/314733/oficinasgestionttp.pdf">Ayuda</a>
-  </button>
-  <button mat-menu-item>
-    <a href="https://www.crtm.es/proteccion-de-datos/">Privacidad y Protección de datos</a>
-  </button>
+  <button mat-menu-item onclick="window.location='https://www.crtm.es/atencion-al-cliente/gestiones/oficinas-de-gestion.aspx'">Sedes CRTM</button>
+  <button mat-menu-item onclick="window.location='https://www.crtm.es/atencion-al-cliente.aspx'">Ayuda</button>
+  <button mat-menu-item onclick="window.location='https://www.crtm.es/proteccion-de-datos/'">Privacidad y Protección de datos</button>
 </mat-menu>
   
   <mat-toolbar class="cabecera">  
@@ -52,22 +46,22 @@
 </button>
 
 <div class="btn-group">
-  <button mat-menu-item class="space-between" (click)="this.router.navigate(['confirmacion_pago']);">
+  <button mat-menu-item class="space-between borde_curvo" (click)="this.router.navigate(['confirmacion_pago']);">
     PayPal
     <img class="main-icon" src="../../assets/paypal-icon.svg" alt="paypal-icon">
   </button>
 
-  <button mat-menu-item class="space-between" (click)="this.router.navigate(['confirmacion_pago']);">
+  <button mat-menu-item class="space-between borde_curvo" (click)="this.router.navigate(['confirmacion_pago']);">
     MasterCard - **5778
     <img class="main-icon" src="../../assets/mastercard-icon.svg" alt="mastercard-icon">
   </button>
 
-  <button mat-menu-item class="space-between" (click)="this.router.navigate(['confirmacion_pago']);">
+  <button mat-menu-item class="space-between borde_curvo" (click)="this.router.navigate(['confirmacion_pago']);">
     Visa - **1129
     <img class="main-icon bus-icon" src="../../assets/visa-icon.svg" alt="visa-icon">
   </button>
 
-  <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
+  <button mat-menu-item class="space-between borde_curvo" (click)="this.router.navigate(['pago']);">
     Añadir nuevo método
     <img class="main-icon" src="../../assets/add-icon.svg" alt="add-icon">
   </button>

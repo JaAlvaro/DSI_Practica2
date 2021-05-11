@@ -1,23 +1,16 @@
-
 <mat-menu #appMenu="matMenu" class="menu_lateral">
-    <button mat-menu-item (click)="this.router.navigate(['']);">
-      Notificaciones
-      <mat-icon color="primary" [matBadge]="1" matBadgeColor="warn" matBadgePosition="above after"></mat-icon>
-    </button>
-    <button mat-menu-item (click)="this.router.navigate(['']);">Calcular trayectos</button>
-    <button mat-menu-item (click)="this.router.navigate(['']);">Ver rutas guardadas</button>
-    <button mat-menu-item (click)="this.router.navigate(['list']);">Ver tarjetas guardadas</button>
-    <button mat-menu-item (click)="this.router.navigate(['lectura']);">Recargar Tarjeta</button>
-    <button mat-menu-item (click)="this.router.navigate(['']);">Incidencias</button>
-    <button mat-menu-item>
-      <a href="https://www.crtm.es/atencion-al-cliente/gestiones/oficinas-de-gestion.aspx">Sedes CRTM</a>
-    </button>
-    <button mat-menu-item>
-      <a href="https://www.crtm.es/media/314733/oficinasgestionttp.pdf">Ayuda</a>
-    </button>
-    <button mat-menu-item>
-      <a href="https://www.crtm.es/proteccion-de-datos/">Privacidad y Protección de datos</a>
-    </button>
+  <button mat-menu-item (click)="this.router.navigate(['']);">
+    Notificaciones
+    <mat-icon color="primary" [matBadge]="1" matBadgeColor="warn" matBadgePosition="above after"></mat-icon>
+  </button>
+  <button mat-menu-item (click)="this.router.navigate(['']);">Calcular trayectos</button>
+  <button mat-menu-item (click)="this.router.navigate(['']);">Ver rutas guardadas</button>
+  <button mat-menu-item (click)="this.router.navigate(['list']);">Ver tarjetas guardadas</button>
+  <button mat-menu-item (click)="this.router.navigate(['lectura']);">Recargar Tarjeta</button>
+  <button mat-menu-item (click)="this.router.navigate(['']);">Incidencias</button>
+  <button mat-menu-item onclick="window.location='https://www.crtm.es/atencion-al-cliente/gestiones/oficinas-de-gestion.aspx'">Sedes CRTM</button>
+  <button mat-menu-item onclick="window.location='https://www.crtm.es/atencion-al-cliente.aspx'">Ayuda</button>
+  <button mat-menu-item onclick="window.location='https://www.crtm.es/proteccion-de-datos/'">Privacidad y Protección de datos</button>
   </mat-menu>
   
   <mat-toolbar class="cabecera">  
@@ -46,29 +39,29 @@
 <div class="btn-group">
   
 
-  <button mat-menu-item class="space-between" (click)="this.router.navigate(['']);">
+  <button mat-menu-item class="space-between borde_curvo" (click)="this.router.navigate(['']);">
     Horarios
     <img class="main-icon" src="../../assets/horario-icon.svg" alt="horario-icon">
   </button>
 
-  <button mat-menu-item class="space-between" (click)="this.router.navigate(['']);">
+  <button mat-menu-item class="space-between borde_curvo" (click)="this.router.navigate(['']);">
     Calcular trayecto
     <img class="main-icon" src="../../assets/ruta-icon.svg" alt="ruta-icon">
   </button>
 
-  <button mat-menu-item class="space-between" (click)="this.router.navigate(['']);">
+  <button mat-menu-item class="space-between borde_curvo" (click)="this.router.navigate(['']);">
     Incidencias
     <img class="main-icon" src="../../assets/incidencia-icon.svg" alt="incidencia-icon">
   </button>
 
-  <button mat-menu-item class="space-between" (click)="this.router.navigate(['']);">
+  <button mat-menu-item class="space-between borde_curvo" (click)="this.router.navigate(['']);">
     Planos
     <img class="main-icon" src="../../assets/plano-icon.svg" alt="plano-icon">
   </button>
 
 
 </div>
-<button class="bigButton" mat-menu-item (click)="this.router.navigate(['lectura']);">Recargar Tarjeta</button>
+<button class="bigButton borde_curvo" mat-menu-item (click)="this.router.navigate(['lectura']);">Recargar Tarjeta</button>
 <button class="roundButton" (click)="this.router.navigate(['lectura']);">
   <img class="card_icon" src="../../assets/card-icon.svg" alt="Icono Home">
 </button>
