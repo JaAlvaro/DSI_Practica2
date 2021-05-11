@@ -32,4 +32,29 @@ export class LecturaComponent implements OnInit {
   public getTarjeta(o: contacto) {
     return Viewcontacto.getTarjeta(o);
   }
+
+  public getRoute(o: contacto) {
+    let route;
+
+    switch (Viewcontacto.getTipo(o)){
+      case 'TTP':
+        route = 'seleccion-viajes/ttp';
+        break;
+      case'Multi':
+      route = 'seleccion-viajes/multi';
+        break;
+      case 'Renfe&Tú':
+        route = 'seleccion-viajes/renfe';
+        break;
+      case 'Infantil':
+        route = 'seleccion-viajes/infantil';
+        break;
+      case 'Azul':
+        route = 'seleccion-viajes/azul';
+        break;
+
+    }
+    return route;
+  }
+  
 }

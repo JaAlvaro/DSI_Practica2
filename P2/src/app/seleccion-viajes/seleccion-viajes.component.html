@@ -51,30 +51,11 @@
     Atrás
   </button>
 
-<div class="btn-group">
-  <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
-    Viaje Sencillo - 1.50€
-    <img class="main-icon" src="../../assets/metro-icon.png" alt="metro-icon">
-  </button>
 
-  <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
-    Metrobus 10 viajes - 12.20€
-    <img class="main-icon" src="../../assets/metro-icon.png" alt="metro-icon">
-  </button>
-
-  <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
-    Viaje autobús - 1.50€
-    <img class="main-icon bus-icon" src="../../assets/bus-icon.svg" alt="bus-icon">
-  </button>
-
-  <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
-    Cercanías Renfe - 2.00€
-    <img class="main-icon" src="../../assets/renfe-icon.png" alt="renfe-icon">
-  </button>
-
-  <button mat-menu-item class="space-between" (click)="this.router.navigate(['pago']);">
-    Recarga Tarjeta TTP - 65.00€
-    <img class="main-icon" src="../../assets/logo_crtm.png" alt="ttp-icon">
+<div class="btn-group" *ngFor="let viaje of getViajes()">
+  <button mat-menu-item  class="space-between" (click)="this.router.navigate(['pago']);">
+    {{viaje.nombre}} - {{viaje.precio}}
+    <img class="main-icon" src={{viaje.icon}} alt="icon">
   </button>
 </div>
 

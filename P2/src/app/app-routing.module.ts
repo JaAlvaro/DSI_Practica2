@@ -18,6 +18,7 @@ const routes: Routes = [{path:'list',component:ListadoComponent},
                         {path:'pago',component:PagoComponent},
                         {path:'lectura',component:LecturaComponent},
                         {path:'confirmacion_pago',component:ConfirmacionPagoComponent},
+                        {path:'seleccion-viajes/:tipoTarjetaSeleccionada',component:SeleccionViajesComponent},
                         
                         ];
 
