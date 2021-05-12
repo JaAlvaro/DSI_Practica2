@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule,ActivatedRoute,NavigationStart } from '@angular/router';
 import { GlobalService } from '../global.service';
-import { contacto,Viewcontacto } from '../contacto';
 
 @Component({
   selector: 'app-seleccion-viajes',

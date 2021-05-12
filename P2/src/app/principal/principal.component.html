@@ -11,34 +11,32 @@
   <button mat-menu-item onclick="window.location='https://www.crtm.es/atencion-al-cliente/gestiones/oficinas-de-gestion.aspx'">Sedes CRTM</button>
   <button mat-menu-item onclick="window.location='https://www.crtm.es/atencion-al-cliente.aspx'">Ayuda</button>
   <button mat-menu-item onclick="window.location='https://www.crtm.es/proteccion-de-datos/'">Privacidad y Protección de datos</button>
-  </mat-menu>
+</mat-menu>
   
-  <mat-toolbar class="cabecera">  
-    <mat-toolbar-row class="space-between" >
-      <div class="align-center">
-        <button mat-flat-button aria-label="Menu" class="menu_button" [matMenuTriggerFor]="appMenu">
-          Menú
-        </button>
-        <span> </span>
-        <button class="transparent border-none">
-          <img class="user_icon" src="../../assets/user-icon.svg" alt="Icono Perfil">
-        </button>
-      </div>
-                
-      <a href="https://www.crtm.es/">
-        <img class="logo_CRTM" src="../../assets/logo_crtm.png" alt="Logo CRTM">
-      </a>
-        
-    </mat-toolbar-row>
-  </mat-toolbar>
+<mat-toolbar class="cabecera">  
+  <mat-toolbar-row class="space-between" >
+    <div class="align-center">
+      <button mat-flat-button aria-label="Menu" class="menu_button" [matMenuTriggerFor]="appMenu">
+        Menú
+      </button>
+      <span> </span>
+      <button class="transparent border-none">
+        <img class="user_icon" src="../../assets/user-icon.svg" alt="Icono Perfil">
+      </button>
+    </div>
+              
+    <a href="https://www.crtm.es/">
+      <img class="logo_CRTM" src="../../assets/logo_crtm.png" alt="Logo CRTM">
+    </a>
+      
+  </mat-toolbar-row>
+</mat-toolbar>
 
-  <div style="margin-top:30px;font-size:30px;" fxLayout="row" fxLayoutAlign="center">
-    <p class="titulo-ventana">Menú principal</p>
-  </div>
+<div style="margin-top:30px;font-size:30px;" fxLayout="row" fxLayoutAlign="center">
+  <p class="titulo-ventana">Menú principal</p>
+</div>
 
 <div class="btn-group">
-  
-
   <button mat-menu-item class="space-between borde_curvo" (click)="this.router.navigate(['']);">
     Horarios
     <img class="main-icon" src="../../assets/horario-icon.svg" alt="horario-icon">
@@ -58,10 +56,10 @@
     Planos
     <img class="main-icon" src="../../assets/plano-icon.svg" alt="plano-icon">
   </button>
-
-
 </div>
+
 <button class="bigButton borde_curvo" mat-menu-item (click)="this.router.navigate(['lectura']);">Recargar Tarjeta</button>
+
 <button class="roundButton" (click)="this.router.navigate(['lectura']);">
   <img class="card_icon" src="../../assets/card-icon.svg" alt="Icono Home">
 </button>

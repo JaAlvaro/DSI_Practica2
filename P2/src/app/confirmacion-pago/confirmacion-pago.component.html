@@ -13,41 +13,40 @@
   <button mat-menu-item onclick="window.location='https://www.crtm.es/proteccion-de-datos/'">Privacidad y Protección de datos</button>
 </mat-menu>
     
-    <mat-toolbar class="cabecera">  
-      <mat-toolbar-row class="space-between" >
-        <div class="align-center">
-          <button mat-flat-button aria-label="Menu" class="menu_button" [matMenuTriggerFor]="appMenu">
-            Menú
-          </button>
-          <span> </span>
-          <button class="transparent border-none">
-            <img class="user_icon" src="../../assets/user-icon.svg" alt="Icono Perfil">
-          </button>
-        </div>
-          
-          <button  class="transparent border-none" (click)="this.router.navigate(['']);">
-            <img class="home_icon" src="../../assets/home-icon.svg" alt="Icono Home">
-          </button>
-          
-          <a href="https://www.crtm.es/">
-            <img class="logo_CRTM" src="../../assets/logo_crtm.png" alt="Logo CRTM">
-          </a>
-          
-      </mat-toolbar-row>
-    </mat-toolbar>
-  
-    <div style="margin-top:30px;font-size:30px;" fxLayout="row" fxLayoutAlign="center">
-      <p class="titulo-ventana">Confirmación de pago</p>
+<mat-toolbar class="cabecera">  
+  <mat-toolbar-row class="space-between" >
+    <div class="align-center">
+      <button mat-flat-button aria-label="Menu" class="menu_button" [matMenuTriggerFor]="appMenu">
+        Menú
+      </button>
+      <span> </span>
+      <button class="transparent border-none">
+        <img class="user_icon" src="../../assets/user-icon.svg" alt="Icono Perfil">
+      </button>
     </div>
+      
+    <button  class="transparent border-none" (click)="this.router.navigate(['']);">
+      <img class="home_icon" src="../../assets/home-icon.svg" alt="Icono Home">
+    </button>
     
-      <fieldset style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">  
-        <br>
-      <legend style="font-size: larger; ">Ha recargado correctamente su tarjeta de transporte. ¡Muchas gracias!</legend>  
-        <img class="check_icon"  src="../../assets/credit-card.png" alt="Icono Confirmación">
-        <br>
-        <div class="btn-group">
-            <button class="bigButton borde_curvo" mat-menu-item (click)="this.router.navigate(['']);">Volver al menú principal</button>
-        </div>
-        <br>
-      </fieldset>  
+    <a href="https://www.crtm.es/">
+      <img class="logo_CRTM" src="../../assets/logo_crtm.png" alt="Logo CRTM">
+    </a>
     
+  </mat-toolbar-row>
+</mat-toolbar>
+  
+<div style="margin-top:30px;font-size:30px;" fxLayout="row" fxLayoutAlign="center">
+  <p class="titulo-ventana">Confirmación de pago</p>
+</div>
+    
+<fieldset style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">  
+  <br>
+  <legend style="font-size: larger; ">Ha recargado correctamente su tarjeta de transporte. ¡Muchas gracias!</legend>  
+  <img class="check_icon"  src="../../assets/credit-card.png" alt="Icono Confirmación">
+  <br>
+  <div class="btn-group">
+      <button class="bigButton borde_curvo" mat-menu-item (click)="this.router.navigate(['']);">Volver al menú principal</button>
+  </div>
+  <br>
+</fieldset>

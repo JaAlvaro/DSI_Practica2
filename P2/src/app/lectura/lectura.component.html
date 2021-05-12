@@ -13,71 +13,70 @@
   <button mat-menu-item onclick="window.location='https://www.crtm.es/proteccion-de-datos/'">Privacidad y Protección de datos</button>
 </mat-menu>
   
-  <mat-toolbar class="cabecera">  
-    <mat-toolbar-row class="space-between" >
-      <div class="align-center">
-        <button mat-flat-button aria-label="Menu" class="menu_button" [matMenuTriggerFor]="appMenu">
-          Menú
-        </button>
-        <span> </span>
-        <button class="transparent border-none">
-          <img class="user_icon" src="../../assets/user-icon.svg" alt="Icono Perfil">
-        </button>
-      </div>
-        
-        
-        <button  class="transparent border-none" (click)="this.router.navigate(['']);">
-          <img class="home_icon" src="../../assets/home-icon.svg" alt="Icono Home">
-        </button>
-        
-        <a href="https://www.crtm.es/">
-          <img class="logo_CRTM" src="../../assets/logo_crtm.png" alt="Logo CRTM">
-        </a>
-        
-    </mat-toolbar-row>
-  </mat-toolbar>
+<mat-toolbar class="cabecera">  
+  <mat-toolbar-row class="space-between" >
+    <div class="align-center">
+      <button mat-flat-button aria-label="Menu" class="menu_button" [matMenuTriggerFor]="appMenu">
+        Menú
+      </button>
+      <span> </span>
+      <button class="transparent border-none">
+        <img class="user_icon" src="../../assets/user-icon.svg" alt="Icono Perfil">
+      </button>
+    </div>
+      
+    <button  class="transparent border-none" (click)="this.router.navigate(['']);">
+      <img class="home_icon" src="../../assets/home-icon.svg" alt="Icono Home">
+    </button>
+    
+    <a href="https://www.crtm.es/">
+      <img class="logo_CRTM" src="../../assets/logo_crtm.png" alt="Logo CRTM">
+    </a>
+      
+  </mat-toolbar-row>
+</mat-toolbar>
 
-  <div class = "responsive" style="margin-top:30px;font-size:30px;" fxLayout="row" fxLayoutAlign="center">
-    <p class="titulo-ventana">Lectura de Tarjeta</p>
-  </div>
+<div class = "responsive" style="margin-top:30px;font-size:30px;" fxLayout="row" fxLayoutAlign="center">
+  <p class="titulo-ventana">Lectura de Tarjeta</p>
+</div>
 
   
-
-  <div class="half" >
-    <div class = "responsive bottomMargin" fxLayout = "column" fxFlex="0 1 calc(50%-32px)">
-      <p fxLayoutAlign="center"> Acerque la tarjeta al sensor NFC del móvil para leer la tarjeta.</p>
-          <div fxLayoutAlign="center" fxFlex="70%">
-          <img class="imagen" src= "../../assets/contactless.gif" alt= "Pago NFC">
-          </div>
+<div class="half" >
+  <div class = "responsive bottomMargin" fxLayout = "column" fxFlex="0 1 calc(50%-32px)">
+    <p fxLayoutAlign="center"> Acerque la tarjeta al sensor NFC del móvil para leer la tarjeta.</p>
+    <div fxLayoutAlign="center" fxFlex="70%">
+      <img class="imagen" src= "../../assets/contactless.gif" alt= "Pago NFC">
     </div>
-    <div class = "responsive" fxLayout = "column" fxFlex="0 1 calc(50%-32px)">
+  </div>
+  
+  <div class = "responsive" fxLayout = "column" fxFlex="0 1 calc(50%-32px)">
       
-      <p> O bien, seleccione una de entre las tarjetas guardadas: </p>
-      
-      <button *ngIf="search_tarjeta==-1" class="add_tarjeta_button space-between" (click)="this.router.navigate(['edit/0']);">
-        Nueva tarjeta
-        <img class="add_icon" src="../../assets/add-icon.svg" alt="add-icon">
-      </button>
+    <p> O bien, seleccione una de entre las tarjetas guardadas: </p>
+    
+    <button *ngIf="search_tarjeta==-1" class="add_tarjeta_button space-between" (click)="this.router.navigate(['edit/0']);">
+      Nueva tarjeta
+      <img class="add_icon" src="../../assets/add-icon.svg" alt="add-icon">
+    </button>
 
-      <mat-form-field fxFlex="25">
-        <mat-label>Nombre de tarjeta</mat-label>
-        <mat-select class="tarjeta" name="tarjeta" [(ngModel)]="search_tarjeta">
-          <mat-option *ngFor="let tarjeta of getTarjetas();let i=index" [value]="tarjeta">
-            {{verTarjeta(tarjeta).nombre}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <div class = "responsive" fxLayout = "row">
-        <div fxFlex="0 1 calc(65%-32px)">
-          <img class="tarjeta responsive" src={{getTarjeta(verTarjeta(search_tarjeta))}} alt={{getTipo(verTarjeta(search_tarjeta))}}>
-        </div>
-        <div  *ngIf="search_tarjeta!=-1" class = "responsive" fxFlex="0 1 calc(35%-32px)">
-          <p class="paragraph bold">Nº Serie:</p>
-          <p class = "paragraph">{{verTarjeta(search_tarjeta).serial_number}}</p>
-          <p class="paragraph bold">Caducidad:</p>
-          <p class = "paragraph">{{verTarjeta(search_tarjeta).caducidad | date: "MM-yyyy"}}</p>
-        </div>
+    <mat-form-field fxFlex="25">
+      <mat-label>Nombre de tarjeta</mat-label>
+      <mat-select class="tarjeta" name="tarjeta" [(ngModel)]="search_tarjeta">
+        <mat-option *ngFor="let tarjeta of getTarjetas();let i=index" [value]="tarjeta">
+          {{verTarjeta(tarjeta).nombre}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class = "responsive" fxLayout = "row">
+      <div fxFlex="0 1 calc(65%-32px)">
+        <img class="tarjeta responsive" src={{getTarjeta(verTarjeta(search_tarjeta))}} alt={{getTipo(verTarjeta(search_tarjeta))}}>
+      </div>
+      <div  *ngIf="search_tarjeta!=-1" class = "responsive" fxFlex="0 1 calc(35%-32px)">
+        <p class="paragraph bold">Nº Serie:</p>
+        <p class = "paragraph">{{verTarjeta(search_tarjeta).serial_number}}</p>
+        <p class="paragraph bold">Caducidad:</p>
+        <p class = "paragraph">{{verTarjeta(search_tarjeta).caducidad | date: "MM-yyyy"}}</p>
       </div>
     </div>
   </div>
-  <button *ngIf="search_tarjeta!=-1" class="bigButton borde_curvo" mat-menu-item (click)="getRoute(verTarjeta(search_tarjeta))">Seleccionar tarjeta</button>
+</div>
+<button *ngIf="search_tarjeta!=-1" class="bigButton borde_curvo" mat-menu-item (click)="getRoute(verTarjeta(search_tarjeta))">Seleccionar tarjeta</button>

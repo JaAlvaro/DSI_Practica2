@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule,ActivatedRoute } from '@angular/router';
 import { GlobalService } from '../global.service';
-import { contacto,Viewcontacto } from '../contacto';
-import {MatTable} from '@angular/material/table';
-import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-principal',
