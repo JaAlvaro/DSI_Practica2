@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule,ActivatedRoute,NavigationStart } from '@angular/router';
 import { GlobalService } from '../global.service';
 import { contacto,Viewcontacto } from '../contacto';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-ver-detalle',
@@ -11,7 +12,7 @@ import { contacto,Viewcontacto } from '../contacto';
 
 export class VerDetalleComponent implements OnInit {
 
-  constructor(public router: Router, public route: ActivatedRoute,private global:GlobalService) { }
+  constructor(public router: Router, public route: ActivatedRoute,private global:GlobalService, private _snackBar: MatSnackBar) { }
   public id;
 
   public contacto:contacto;
@@ -42,12 +43,19 @@ export class VerDetalleComponent implements OnInit {
 
   public aceptar()
   {
-    if(this.id>0)
-      this.global.updatecontacto(this.contacto.id-1,this.contacto);
-    else
-      this.global.nuevocontacto(this.contacto);
-
-    this.router.navigate(['list/']);
+    if (this.contacto.nombre == null || this.contacto.nombre == ""){
+      let snackBarRef = this._snackBar.open('Nombre vacío, introduce uno por favor.','',{duration: 2000});
+    } else if (this.contacto.serial_number == null || this.contacto.serial_number == ""){
+      let snackBarRef = this._snackBar.open('Número de serie vacío, introduce uno por favor.','',{duration: 2000});
+    } else if (this.contacto.tipo== null){
+      let snackBarRef = this._snackBar.open('Tipo vacío, selecciona uno por favor.','',{duration: 2000});
+    } else {
+      if(this.id>0)
+        this.global.updatecontacto(this.contacto.id-1,this.contacto);
+      else
+        this.global.nuevocontacto(this.contacto);   
+      this.router.navigate(['list/']);
+    }
   }
 
   public cancelar()
