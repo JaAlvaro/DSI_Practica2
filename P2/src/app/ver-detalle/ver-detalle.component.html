@@ -39,9 +39,9 @@
 <div  fxLayout="row" fxLayoutAlign="center">
 
   <div fxFlex=66 fxFlexFill fxLayout="column" fxLayoutAlign="center">
-
-    <p fxFlex fxFlexAlign="center" class="titulo-ventana">Tarjeta</p>
-
+    <div style="margin-top:30px" fxLayout="row" fxLayoutAlign="center">
+      <p class="titulo-ventana">Tarjeta</p>
+    </div>
     <mat-expansion-panel [expanded]="true">
       <mat-expansion-panel-header >
           <mat-panel-title>
@@ -63,7 +63,7 @@
         <mat-form-field>
             <mat-label>Tipo</mat-label>
             <mat-select [(ngModel)]="contacto.tipo" name="tipo">
-                <mat-option *ngFor="let tipo of getTipos();let i=index" [value]="i">
+                <mat-option *ngFor="let tipo of getTiposCreacion();let i=index" [value]="i+1">
                 {{tipo}}
                 </mat-option>
             </mat-select>
@@ -86,4 +86,24 @@
   </div>
 </div>
 
+<mat-toolbar class="footer">
+  CRTM - Todos los derechos reservados 2021 &copy;
+  <mat-toolbar-row class="space-around" >
+    <a href="https://www.renfe.com/es/es/cercanias/cercanias-madrid">
+      <img src="../../assets/cercanias-icon.png" alt="Cercanias Renfe">
+    </a>
+    <a href="https://www.metromadrid.es/es">
+      <img src="../../assets/metro-icon.png" alt="Metro">
+    </a>
+    <a href="https://www.crtm.es/">
+      <img src="../../assets/logo_crtm.png" alt="Logo CRTM">
+    </a>
+    <a href="https://www.emtmadrid.es/Hom">
+      <img src="../../assets/bus-icon.svg" alt="Bus">
+    </a>
+    <a href="https://www.metroligero-oeste.es/">
+      <img src="../../assets/metroligero-icon.png" alt="Metro Ligero">
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>
 

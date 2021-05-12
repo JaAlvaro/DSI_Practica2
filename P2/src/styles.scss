@@ -216,10 +216,36 @@ img {
     background-color: $color_corporativo;
 }
 
+.footer {
+  width: 100%;
+  padding: 50px 0 20px 0;
+  margin-top: 70px;
+  background-color: $color_corporativo;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer img{
+  height: 55px;
+}
+
+@media only screen and (max-width: 768px){
+  .footer img{
+    height: 35px;
+  }
+}
+
 .space-between{
   display: flex!important;
   justify-content: space-between!important;
 }
+
+.space-around{
+  display: flex!important;
+  justify-content: space-around!important;
+}
+
 .menu_lateral a:link, a:visited, a:active{
   text-decoration: none;
 }
@@ -313,5 +339,10 @@ img {
   .roundButton{
     display: none;
   }
+}
+
+.mensaje_sin_tarjetas {
+  text-align: center;
+  margin: 50px auto;
 }
 

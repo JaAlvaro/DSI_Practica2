@@ -45,6 +45,12 @@ export class Viewcontacto{
     {
         return Viewcontacto.TIPOS;
     }
+
+    public static getTiposCreacion()
+    {
+        let arr = Viewcontacto.TIPOS.slice()
+        return arr.splice(1, 5);
+    }
     
     public static getHabitual(contacto:contacto)
     {

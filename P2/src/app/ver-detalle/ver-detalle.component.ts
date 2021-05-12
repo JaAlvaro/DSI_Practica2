@@ -35,6 +35,11 @@ export class VerDetalleComponent implements OnInit {
     return Viewcontacto.getTipos();
   }
 
+  public getTiposCreacion()
+  {
+    return Viewcontacto.getTiposCreacion();
+  }
+
   public aceptar()
   {
     if(this.id>0)
