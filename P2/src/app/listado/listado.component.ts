@@ -49,11 +49,13 @@ export class ListadoComponent implements OnInit {
 
   public eliminar(id)
   {
-    let snackBarRef = this._snackBar.open('Tarjeta eliminada','',{duration: 2000});
-    this.global.eliminar(id);
-    // Lanzar explicitamente el render solo es necesario con datasource estaticos...
-    // si los datos son un Observable la tabla se repinta sola!.
-    this.tabladatos.renderRows();
+      if (confirm("¿Estás seguro de eliminar la tarjeta?")) {
+        let snackBarRef = this._snackBar.open('Tarjeta eliminada', '', { duration: 2000 });
+        this.global.eliminar(id);
+        // Lanzar explicitamente el render solo es necesario con datasource estaticos...
+        // si los datos son un Observable la tabla se repinta sola!.
+        this.tabladatos.renderRows();
+      }
   }
 
   public getTipos()
