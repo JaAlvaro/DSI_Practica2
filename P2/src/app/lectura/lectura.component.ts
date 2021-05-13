@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule,ActivatedRoute,NavigationStart } from '@angular/router';
 import { GlobalService } from '../global.service';
-import { contacto,Viewcontacto } from '../contacto';
+import { tarjeta,Viewtarjeta } from '../tarjeta';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
@@ -19,24 +19,24 @@ export class LecturaComponent implements OnInit {
   public search_tarjeta:number = -1; 
   
   public verTarjeta(id:number){
-    return this.global.readcontacto(id-1)
+    return this.global.readtarjeta(id-1)
   }
   public getTarjetas(){
     return this.global.getTarjetas()
   }
 
-  public getTipo(o: contacto) {
-    return Viewcontacto.getTipo(o);
+  public getTipo(o: tarjeta) {
+    return Viewtarjeta.getTipo(o);
   }
 
-  public getTarjeta(o: contacto) {
-    return Viewcontacto.getTarjeta(o);
+  public getTarjeta(o: tarjeta) {
+    return Viewtarjeta.getTarjeta(o);
   }
 
-  public getRoute(o: contacto) {
+  public getRoute(o: tarjeta) {
     let route;
 
-    switch (Viewcontacto.getTipo(o)){
+    switch (Viewtarjeta.getTipo(o)){
       case 'TTP':
         route = 'seleccion-viajes/ttp';
         // route = "this.router.navigate(['seleccion-viajes/ttp']);"

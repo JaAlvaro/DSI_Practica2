@@ -49,20 +49,20 @@
           </mat-panel-title>
       </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutAlign="center">
-        <mat-form-field><input matInput type="text" placeholder="Nombre" [(ngModel)]="contacto.nombre" name="nombre"/></mat-form-field>
+        <mat-form-field><input matInput type="text" placeholder="Nombre" [(ngModel)]="tarjeta.nombre" name="nombre"/></mat-form-field>
         
-        <mat-form-field><input matInput type="text" placeholder="Número de Serie" [(ngModel)]="contacto.serial_number" name="serial_number"/></mat-form-field>
+        <mat-form-field><input matInput type="text" placeholder="Número de Serie" [(ngModel)]="tarjeta.serial_number" name="serial_number"/></mat-form-field>
         
         <mat-form-field>
             <mat-label>Fecha de caducidad</mat-label>
-            <input matInput [matDatepicker]="picker" [(ngModel)]="contacto.caducidad" name="caducidad">
+            <input matInput [matDatepicker]="picker" [(ngModel)]="tarjeta.caducidad" name="caducidad">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
           
         <mat-form-field>
             <mat-label>Tipo</mat-label>
-            <mat-select [(ngModel)]="contacto.tipo" name="tipo">
+            <mat-select [(ngModel)]="tarjeta.tipo" name="tipo">
                 <mat-option *ngFor="let tipo of getTiposCreacion();let i=index" [value]="i+1">
                 {{tipo}}
                 </mat-option>
@@ -70,7 +70,7 @@
         </mat-form-field>
 
         <div fxFlex>
-            <mat-checkbox [(ngModel)]="contacto.habitual" name="habitual">Habitual</mat-checkbox>
+            <mat-checkbox [(ngModel)]="tarjeta.habitual" name="habitual">Habitual</mat-checkbox>
         </div>
       </div>
     </mat-expansion-panel>

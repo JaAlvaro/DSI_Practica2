@@ -1,5 +1,5 @@
 
-export class Icontacto {
+export class Itarjeta {
     id: number;
     nombre: string;
     serial_number?: string;
@@ -8,9 +8,7 @@ export class Icontacto {
     habitual?:boolean;
 };
 
-
-
-export class contacto implements Icontacto
+export class tarjeta implements Itarjeta
 {
     id: number;
     nombre: string;
@@ -19,42 +17,42 @@ export class contacto implements Icontacto
     tipo?:number;
     habitual?:boolean;
      
-    constructor(o?:Icontacto)
+    constructor(o?:Itarjeta)
     {
         if(o !== undefined) Object.assign(this,o);
     }   
 }
 
-export class Viewcontacto{
+export class Viewtarjeta{
        
     private static TIPOS:string[]=['Todos','TTP','Multi','Renfe&Tú', 'Infantil', 'Azul'];
     private static TARJETAS:string[]=['','../../assets/tarjeta_ttp.jpg','../../assets/tarjeta_multi.jpg','../../assets/tarjeta_renfe.png','../../assets/tarjeta_infantil.jpg','../../assets/tarjeta_azul.jpg'];
 
-    public static getTipo(contacto:contacto)
+    public static getTipo(tarjeta:tarjeta)
     {
-        return Viewcontacto.TIPOS[contacto.tipo];
+        return Viewtarjeta.TIPOS[tarjeta.tipo];
     }
 
-    public static getTarjeta(contacto:contacto)
+    public static getTarjeta(tarjeta:tarjeta)
     {
-        return Viewcontacto.TARJETAS[contacto.tipo];
+        return Viewtarjeta.TARJETAS[tarjeta.tipo];
     }
 
 
     public static getTipos()
     {
-        return Viewcontacto.TIPOS;
+        return Viewtarjeta.TIPOS;
     }
 
     public static getTiposCreacion()
     {
-        let arr = Viewcontacto.TIPOS.slice()
+        let arr = Viewtarjeta.TIPOS.slice()
         return arr.splice(1, 5);
     }
     
-    public static getHabitual(contacto:contacto)
+    public static getHabitual(tarjeta:tarjeta)
     {
-        return (contacto.habitual)?"Sí":"No";
+        return (tarjeta.habitual)?"Sí":"No";
     }    
 }
 

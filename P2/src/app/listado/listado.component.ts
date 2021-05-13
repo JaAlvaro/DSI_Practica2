@@ -1,7 +1,7 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
 import { Router, RouterModule,ActivatedRoute } from '@angular/router';
 import { GlobalService } from '../global.service';
-import { contacto,Viewcontacto } from '../contacto';
+import { tarjeta,Viewtarjeta } from '../tarjeta';
 import {MatTable} from '@angular/material/table';
 import {MatSnackBar} from '@angular/material/snack-bar';
 
@@ -20,7 +20,7 @@ export class ListadoComponent implements OnInit {
   ngOnInit() {}
 
   public displayedColumns: string[] = ['tarjeta','nombre', 'tipo','serial_number','caducidad','habitual','action2'];
-  //public dataSource:contacto[]= this.global.datos;
+  //public dataSource:tarjeta[]= this.global.datos;
   
   public search_texto:string="";
   public search_tipo:number=0;
@@ -60,28 +60,28 @@ export class ListadoComponent implements OnInit {
 
   public getTipos()
   {
-    return Viewcontacto.getTipos();
+    return Viewtarjeta.getTipos();
   }
 
 
-  public getHabitual(o:contacto)
+  public getHabitual(o:tarjeta)
   {
-    return Viewcontacto.getHabitual(o);
+    return Viewtarjeta.getHabitual(o);
   }
 
-  public getTipo(o:contacto)
+  public getTipo(o:tarjeta)
   {
-    return Viewcontacto.getTipo(o);
+    return Viewtarjeta.getTipo(o);
   }
 
-  public getTarjeta(o:contacto)
+  public getTarjeta(o:tarjeta)
   {
-    return Viewcontacto.getTarjeta(o);
+    return Viewtarjeta.getTarjeta(o);
   }
 
 
-  public getNcontactos()
+  public getNtarjetas()
   {
-    return this.global.getNcontactos()
+    return this.global.getNtarjetas()
   }
 }

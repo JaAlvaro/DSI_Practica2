@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule,ActivatedRoute,NavigationStart } from '@angular/router';
 import { GlobalService } from '../global.service';
-import { contacto,Viewcontacto } from '../contacto';
+import { tarjeta,Viewtarjeta } from '../tarjeta';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -15,7 +15,7 @@ export class VerDetalleComponent implements OnInit {
   constructor(public router: Router, public route: ActivatedRoute,private global:GlobalService, private _snackBar: MatSnackBar) { }
   public id;
 
-  public contacto:contacto;
+  public tarjeta:tarjeta;
 
   ngOnInit() {
     
@@ -24,36 +24,36 @@ export class VerDetalleComponent implements OnInit {
       this.id =params['params']['id'];
       console.log(params['params']['id']);
       if(this.id>0)
-        this.contacto=this.global.readcontacto(this.id-1);
+        this.tarjeta=this.global.readtarjeta(this.id-1);
       else 
-        this.contacto=new contacto();
+        this.tarjeta=new tarjeta();
     })
     
   }
 
   public getTipos()
   {
-    return Viewcontacto.getTipos();
+    return Viewtarjeta.getTipos();
   }
 
   public getTiposCreacion()
   {
-    return Viewcontacto.getTiposCreacion();
+    return Viewtarjeta.getTiposCreacion();
   }
 
   public aceptar()
   {
-    if (this.contacto.nombre == null || this.contacto.nombre == ""){
+    if (this.tarjeta.nombre == null || this.tarjeta.nombre == ""){
       let snackBarRef = this._snackBar.open('Nombre vacío, introduce uno por favor.','',{duration: 2000});
-    } else if (this.contacto.serial_number == null || this.contacto.serial_number == ""){
+    } else if (this.tarjeta.serial_number == null || this.tarjeta.serial_number == ""){
       let snackBarRef = this._snackBar.open('Número de serie vacío, introduce uno por favor.','',{duration: 2000});
-    } else if (this.contacto.tipo== null){
+    } else if (this.tarjeta.tipo== null){
       let snackBarRef = this._snackBar.open('Tipo vacío, selecciona uno por favor.','',{duration: 2000});
     } else {
       if(this.id>0)
-        this.global.updatecontacto(this.contacto.id-1,this.contacto);
+        this.global.updatetarjeta(this.tarjeta.id-1,this.tarjeta);
       else
-        this.global.nuevocontacto(this.contacto);   
+        this.global.nuevotarjeta(this.tarjeta);   
       this.router.navigate(['list/']);
     }
   }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Icontacto,contacto,Viewcontacto } from './contacto';
+import { Itarjeta,tarjeta,Viewtarjeta } from './tarjeta';
 import { Iviaje,viaje} from './viaje';
 
 @Injectable({
@@ -9,7 +9,7 @@ export class GlobalService {
 
   constructor() { }
 
-  public datos: contacto[] = [
+  public datos: tarjeta[] = [
     {id: 1, nombre: 'Tarjeta TTP', serial_number: '0061274879', caducidad: new Date(2024, 2, 29), tipo: 1, habitual: true},
     {id: 2, nombre: 'Tarjeta Multi',serial_number: '1061295300', caducidad: new Date(2030, 7, 12), tipo: 2, habitual: false},
     {id: 3, nombre: 'Tarjeta Renfe&Tú',  serial_number: '8064374879',caducidad: new Date(2025, 1, 25),tipo: 3, habitual:false},
@@ -44,9 +44,9 @@ export class GlobalService {
     {id: 1, nombre: 'Abono azul', precio: '30.00€', icon: '../../assets/logo_crtm.png'}
   ];
 
-  public readcontacto(id:number):contacto
+  public readtarjeta(id:number):tarjeta
   {
-    return new contacto(this.datos[id]);
+    return new tarjeta(this.datos[id]);
   }
 
   public eliminar(id)
@@ -62,18 +62,18 @@ export class GlobalService {
     }
   }
 
-  public updatecontacto(id:number,contacto:contacto)
+  public updatetarjeta(id:number,tarjeta:tarjeta)
   {
-    this.datos[id]=contacto;
+    this.datos[id]=tarjeta;
   }
 
-  public nuevocontacto(contacto:contacto)
+  public nuevotarjeta(tarjeta:tarjeta)
   {
-    contacto.id=this.datos.length+1;
-    this.datos.push(contacto);
+    tarjeta.id=this.datos.length+1;
+    this.datos.push(tarjeta);
   }
 
-  public getNcontactos()
+  public getNtarjetas()
   {
     return this.datos.length;
   }

@@ -39,7 +39,7 @@
   <div fxFlex="90" >
     <div style="margin-top:30px" fxLayout="row" fxLayoutAlign="center">
       <p class="titulo-ventana">Lista de tarjetas</p>
-      <mat-icon color="primary" [matBadge]="getNcontactos()" matBadgeColor="warn" matBadgePosition="above after"></mat-icon>
+      <mat-icon color="primary" [matBadge]="getNtarjetas()" matBadgeColor="warn" matBadgePosition="above after"></mat-icon>
     </div>
 
     <div class="container" fxLayoutAlign="space-between center" >  
@@ -132,7 +132,7 @@
   </div>
 </div>
 
-<div class="mensaje_sin_tarjetas" *ngIf="getNcontactos()==0">No hay tarjetas guardadas.</div>
+<div class="mensaje_sin_tarjetas" *ngIf="getNtarjetas()==0">No hay tarjetas guardadas.</div>
 
 <button class="roundButton" (click)="this.router.navigate(['lectura']);">
   <img class="card_icon" src="../../assets/card-icon.svg" alt="Icono Card">
