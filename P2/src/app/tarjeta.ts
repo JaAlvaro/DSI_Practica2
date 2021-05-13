@@ -26,7 +26,7 @@ export class tarjeta implements Itarjeta
 export class Viewtarjeta{
        
     private static TIPOS:string[]=['Todos','TTP','Multi','Renfe&Tú', 'Infantil', 'Azul'];
-    private static TARJETAS:string[]=['','../../assets/tarjeta_ttp.jpg','../../assets/tarjeta_multi.jpg','../../assets/tarjeta_renfe.png','../../assets/tarjeta_infantil.jpg','../../assets/tarjeta_azul.jpg'];
+    private static TARJETAS:string[]=['','./assets/tarjeta_ttp.jpg','./assets/tarjeta_multi.jpg','./assets/tarjeta_renfe.png','./assets/tarjeta_infantil.jpg','./assets/tarjeta_azul.jpg'];
 
     public static getTipo(tarjeta:tarjeta)
     {
