@@ -77,8 +77,10 @@
       <!-- Image Column -->
       <ng-container matColumnDef="tarjeta">
         <th mat-header-cell *matHeaderCellDef> Tarjeta </th>
-        <td mat-cell *matCellDef="let element"> 
-          <img class="tarjeta" src={{getTarjeta(element)}} alt={{getTipo(element)}}>
+        <td mat-cell *matCellDef="let element; let row">
+          <button (click)="editar(row.id)" mat-icon-button class="iconbutton" color="primary">
+            <img class="tarjeta" src={{getTarjeta(element)}} alt={{getTipo(element)}}>  
+          </button>
         </td>
       </ng-container>
 
@@ -95,19 +97,19 @@
       </ng-container>
 
       <!-- Symbol Column -->
-      <ng-container matColumnDef="caducidad">
-        <th mat-header-cell *matHeaderCellDef> Fecha de caducidad </th>
-        <td mat-cell *matCellDef="let element"> {{element.caducidad | date: "MM-yyyy"}} </td>
+      <ng-container matColumnDef="caducidad" >
+        <th mat-header-cell *matHeaderCellDef style="text-align:center"> Fecha de caducidad </th>
+        <td mat-cell *matCellDef="let element" style="text-align:center"> {{element.caducidad | date: "MM-yyyy"}} </td>
       </ng-container>
 
       <ng-container matColumnDef="tipo">
-        <th mat-header-cell *matHeaderCellDef style="text-align:center"> Tipo </th>
-        <td mat-cell *matCellDef="let element" style="text-align:center"> {{getTipo(element)}} </td>
+        <th mat-header-cell *matHeaderCellDef style="text-align:center" class="movil_none"> Tipo </th>
+        <td mat-cell *matCellDef="let element" style="text-align:center" class="movil_none"> {{getTipo(element)}} </td>
       </ng-container>
   
       <ng-container matColumnDef="habitual">
-        <th mat-header-cell *matHeaderCellDef style="text-align:center">Habitual </th>
-        <td mat-cell *matCellDef="let element" style="text-align:center"> {{getHabitual(element)}} </td>
+        <th mat-header-cell *matHeaderCellDef style="text-align:center" class="movil_none">Habitual </th>
+        <td mat-cell *matCellDef="let element" style="text-align:center" class="movil_none"> {{getHabitual(element)}} </td>
       </ng-container>
     
         
